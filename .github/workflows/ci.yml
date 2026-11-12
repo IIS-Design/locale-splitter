@@ -17,4 +17,4 @@ jobs:
       container-port: 3000
       smoke-path: /
       deploy-vm115: false
-      deploy-coolify: false
+      deploy-coolify: true
