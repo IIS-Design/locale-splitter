@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  deploy:
+    permissions:
+      contents: read
+      packages: write
+
+    uses: IIS-Design/.github/.github/workflows/container-deploy.yml@main
+
+    with:
+      app: locale-splitter
+      containerfile: Dockerfile
+      container-port: 3000
+      smoke-path: /
+      deploy-vm115: false
+      deploy-coolify: false
